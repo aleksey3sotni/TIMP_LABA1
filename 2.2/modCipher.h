@@ -1,17 +1,16 @@
-#ifndef MODCIPHER_H
-#define MODCIPHER_H
-
+#pragma once
+#include <vector>
 #include <string>
+#include <map>
+
 using namespace std;
 
 class modCipher {
-public:
-    modCipher(int skey);
-    string encrypt(string &text);
-    string decrypt(string &text);
-
-private:
-    int key; 
+    private:
+        int key;
+    public:
+        modCipher()=delete;
+        modCipher(int skey);
+        string encrypt(string &text);
+        string decrypt(string &text);
 };
-
-#endif 
